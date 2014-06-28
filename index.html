@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+   <title>Probando jQuery Mobile</title>
+   
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+   <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+   <script type="text/javascript" src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+   
+   <!-- below <script src="phonegap.js"></script> -->
+   <script type="text/javascript" src="wallpaper.js"></script>
+</head>
+
+<body>
+
+<script type="text/javascript">
+  // prep some variables
+  var imagePath = "http://www.nocturnar.com/forum/attachments/perfiles/15694d1333038178-imagenes-de-fondo-fantasia-fluorecente-fondo-de-escritorio.jpg";             // Mention the complete path to your image. If it contains under multiple folder then mention the path from level "www" to the level your image contains with its name including its extension.
+  var imageTitle = "christmas";                     // Set title of your choice.
+  var folderName = "PluginImages";                  // Set folder Name of your choice. 
+  var success = function() { alert("Success"); };           // Do something on success return.
+  var error = function(message) { alert("Oopsie! " + message); };   // Do something on error return.
+
+  // For setting wallpaper & saving image
+  wallpaper.setImage(imagePath, imageTitle, folderName, success, error);
+
+  // For saving image
+  wallpaper.saveImage(imagePath, imageTitle, folderName, success, error);   
+  
+  
+  
+ 
+
+function mi_funcion() {
+
+  alert("El resultado es 1");
+} 
+  
+</script>
+
+
+   <div data-role="page">
+      <div data-role="header">
+         Página para móviles
+      </div>
+      <div data-role="content">
+	  <button value="esto es un boton" onclick="mi_funcion()"/>
+         Esta es la versión para móviles de mi sitio web
+      </div>
+      <div data-role="footer">
+         Contacta y lo que sea...
+      </div>
+   </div>
+</body>
+</html> 
